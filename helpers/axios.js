@@ -18,15 +18,6 @@ class Pokemon {
 		};
 	}
 
-	get pokemonCapitalizado() {
-		return this.pokemonJSON.map((pokemon) => {
-			console.log("pokemonCapitalizado", pokemon);
-			let palabras = pokemon.split(" ");
-			palabras = palabras.map((palabra) => palabra[0].toUpperCase() + palabra.substring(1));
-			return palabras.join(" ");
-		});
-	}
-
 	async pokemonesGet() {
 		try {
 			const instance = axios.create({
